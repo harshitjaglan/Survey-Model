@@ -1,4 +1,6 @@
 class Students:
+    # created a dictionary for each group that counts how many members are in the group
+    # and how many of them like a specific genre.
     E_dict = {'Members': 0, 'Action': 0, 'Scifi': 0, 'Comedy': 0, 'History': 0}
     M_dict = {'Members': 0, 'Action': 0, 'Scifi': 0, 'Comedy': 0, 'History': 0}
     H_dict = {'Members': 0, 'Action': 0, 'Scifi': 0, 'Comedy': 0, 'History': 0}
@@ -13,7 +15,7 @@ class Students:
         for x in Movie_genre:
             a.append(x)
         self.__Movie_genre = a
-        # Assigning Groups and Calculating Like for a genre
+        # Assigning Groups and Calculating Likes for a genre
         import itertools as it
         if 4 <= int(self.__age) <= 9:
             Students.E_dict['Members'] += 1
@@ -92,6 +94,7 @@ class Students:
 z = list(range(1, 100))
 x = 0
 
+# Taking the survey through standard input
 while True:
     a1 = input('Enter your name or press "Q" to stop the survey: ')
     if a1.lower() == 'q':
@@ -142,11 +145,14 @@ while True:
 
     z[x] = Students(a1, a2, a3, a4, a5, a6)
     x += 1
+
+# Taking commands to do calculation
 print('******')
 print('Enter command for Favorite Genre or Percentage Genre:')
 print('Example commands: "Fav Genre E", "Percentage Genre C Action"')
 print('Enter "Q" to exit.')
 print('*******')
+
 
 while True:
     cmnd = input().lower()
